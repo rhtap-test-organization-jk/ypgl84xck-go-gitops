@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ypgl84xck-go-gitops
+  description: This is GitOps manifest for ypgl84xck-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=ypgl84xck-go
+    backstage.io/kubernetes-id: ypgl84xck-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: ypgl84xck-go-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ypgl84xck-go
